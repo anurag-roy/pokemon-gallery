@@ -23,13 +23,7 @@ export async function getStaticProps() {
   };
 }
 
-function cn(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 function BlurImage({ image }: { image: Image }) {
-  const [isLoading, setLoading] = useState(true);
-
   return (
     <a
       href={`https://www.pokemon.com/us/pokedex/${image.id}`}
@@ -45,11 +39,7 @@ function BlurImage({ image }: { image: Image }) {
           src={image.imageUrl}
           height="475px"
           width="475px"
-          className={cn(
-            'duration-700 ease-in-out group-hover:opacity-75',
-            isLoading ? 'scale-110 blur-2xl' : 'scale-100 blur-0'
-          )}
-          onLoadingComplete={() => setLoading(false)}
+          className="group-hover:opacity-75"
         />
       </div>
       <p className="mt-4 pl-2 text-lg font-medium text-gray-900">
