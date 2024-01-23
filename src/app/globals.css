@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pokemon-bg {
+  background-color: var(--bg);
+  .group:hover & {
+    background-color: var(--bg-hover);
+  }
+}
