@@ -4,6 +4,6 @@ export type Pokemon = {
   genus: string;
   imageUrl: string;
   description: string;
-  types: string;
+  types: string[];
   color: string;
 };

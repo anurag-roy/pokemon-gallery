@@ -1,6 +1,6 @@
-import { Pokemon } from '@/types';
-import { default as Image } from 'next/image';
-import * as React from 'react';
+import type { Pokemon } from '@/types';
+import Image from 'next/image';
+import type { CSSProperties } from 'react';
 
 type CardProps = {
   pokemon: Pokemon;
@@ -11,6 +11,7 @@ export function Card({ pokemon }: CardProps) {
     <a
       href={`https://www.pokemon.com/us/pokedex/${pokemon.id}`}
       target="_blank"
+      rel="noopener noreferrer"
       className="group"
     >
       <div
@@ -19,7 +20,7 @@ export function Card({ pokemon }: CardProps) {
           {
             '--bg': `${pokemon.color}66`,
             '--bg-hover': `${pokemon.color}aa`,
-          } as React.CSSProperties
+          } as CSSProperties
         }
       >
         <Image
@@ -27,6 +28,7 @@ export function Card({ pokemon }: CardProps) {
           src={pokemon.imageUrl}
           height={400}
           width={400}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
         />
       </div>
       <p className="mt-4 pl-2 text-lg font-medium text-gray-900 group-hover:text-blue-600">
