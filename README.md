@@ -1,3 +1,5 @@
+
+
 # Pokemon Gallery
 
 <img width="1792" alt="pokemon-gallery-screenshot" src="https://user-images.githubusercontent.com/53750093/160474957-2d0fdadd-2c7a-4afc-9cd8-17a8556300d0.png">
@@ -8,3 +10,12 @@
 - Favicon from [Flaticon](https://www.flaticon.com/)
 - Data sourced from [PokeAPI](https://github.com/anurag-roy/poke-api)
 - Deployed on [Vercel](https://vercel.com/)
+
+### Getting Started
+
+Install dependencies and run the development server:
+
+```bash
+npm install
+npm run dev
+```
